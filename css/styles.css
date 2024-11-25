@@ -194,6 +194,10 @@ p {
   color: var(--color-white);
 }
 
+.button-disable {
+  display: none;
+}
+
 .decrement-icon,
 .increment-icon {
   width: 20px;
