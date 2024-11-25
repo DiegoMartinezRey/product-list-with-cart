@@ -15,497 +15,517 @@
         <button class="button">Name</button>
         <button class="button">Price</button>
       </section>
-      <section class="container-all-products">
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-waffle-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-waffle-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-waffle-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-waffle-mobile.jpg"
-                alt="waffle"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="waffle">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
-            </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="waffle"
-            >
-              <div class="decrement-icon" data-id="waffle">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
+      <section class="container-products-cart">
+        <section class="container-all-products">
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-waffle-desktop.jpg"
                 />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-waffle-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-waffle-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-waffle-mobile.jpg"
+                  alt="waffle"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="waffle">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
               </div>
-              <p id="quantity-waffle" class="quantity" data-id="waffle">1</p>
-              <div class="increment-icon" data-id="waffle">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="text-info-product">
-            <p>Waffle</p>
-            <h3>Waffle with Berries</h3>
-            <h3>$6.50</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-creme-brulee-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-creme-brulee-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-creme-brulee-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-creme-brulee-mobile.jpg"
-                alt="brulee"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="brulee">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
-            </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="brulee"
-            >
-              <div class="decrement-icon" data-id="brulee">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
-                />
-              </div>
-              <p id="quantity-brulee" class="quantity" data-id="brulee">1</p>
-              <div class="increment-icon" data-id="brulee">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="waffle"
+              >
+                <div class="decrement-icon" data-id="waffle">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-waffle" class="quantity" data-id="waffle">1</p>
+                <div class="increment-icon" data-id="waffle">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-info-product">
-            <p>Crème Brûlée</p>
-            <h3>Vanilla Bean Crème Brûlée</h3>
-            <h3>$7.00</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-macaron-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-macaron-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-macaron-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-macaron-mobile.jpg"
-                alt="macaron"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="macaron">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
+            <div class="text-info-product">
+              <p>Waffle</p>
+              <h3>Waffle with Berries</h3>
+              <h3>$6.50</h3>
             </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="macaron"
-            >
-              <div class="decrement-icon" data-id="macaron">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-creme-brulee-desktop.jpg"
                 />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-creme-brulee-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-creme-brulee-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-creme-brulee-mobile.jpg"
+                  alt="brulee"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="brulee">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
               </div>
-              <p id="quantity-macaron" class="quantity" data-id="macaron">1</p>
-              <div class="increment-icon" data-id="macaron">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="text-info-product">
-            <p>Macaron</p>
-            <h3>Macaron Mix of Five</h3>
-            <h3>$8.00</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-tiramisu-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-tiramisu-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-tiramisu-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-tiramisu-mobile.jpg"
-                alt="tiramisu"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="tiramisu">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
-            </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="tiramisu"
-            >
-              <div class="decrement-icon" data-id="tiramisu">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
-                />
-              </div>
-              <p id="quantity-tiramisu" class="quantity" data-id="tiramisu">
-                1
-              </p>
-              <div class="increment-icon" data-id="tiramisu">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="brulee"
+              >
+                <div class="decrement-icon" data-id="brulee">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-brulee" class="quantity" data-id="brulee">1</p>
+                <div class="increment-icon" data-id="brulee">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-info-product">
-            <p>Tiramisu</p>
-            <h3>Classic Tiramisu</h3>
-            <h3>$5.50</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-baklava-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-baklava-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-baklava-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-baklava-mobile.jpg"
-                alt="baklava"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="baklava">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
+            <div class="text-info-product">
+              <p>Crème Brûlée</p>
+              <h3>Vanilla Bean Crème Brûlée</h3>
+              <h3>$7.00</h3>
             </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="baklava"
-            >
-              <div class="decrement-icon" data-id="baklava">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-macaron-desktop.jpg"
                 />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-macaron-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-macaron-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-macaron-mobile.jpg"
+                  alt="macaron"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="macaron">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
               </div>
-              <p id="quantity-baklava" class="quantity" data-id="baklava">1</p>
-              <div class="increment-icon" data-id="baklava">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="text-info-product">
-            <p>Baklava</p>
-            <h3>Pistachio Baklava</h3>
-            <h3>$4.00</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-meringue-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-meringue-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-meringue-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-meringue-mobile.jpg"
-                alt="meringue"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="meringue">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
-            </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="meringue"
-            >
-              <div class="decrement-icon" data-id="meringue">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
-                />
-              </div>
-              <p id="quantity-meringue" class="quantity" data-id="meringue">
-                1
-              </p>
-              <div class="increment-icon" data-id="meringue">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="macaron"
+              >
+                <div class="decrement-icon" data-id="macaron">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-macaron" class="quantity" data-id="macaron">
+                  1
+                </p>
+                <div class="increment-icon" data-id="macaron">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-info-product">
-            <p>Pie</p>
-            <h3>Lemon Meringue Pie</h3>
-            <h3>$5.00</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-cake-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-cake-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-cake-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-cake-mobile.jpg"
-                alt="cake"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="cake">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
+            <div class="text-info-product">
+              <p>Macaron</p>
+              <h3>Macaron Mix of Five</h3>
+              <h3>$8.00</h3>
             </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="cake"
-            >
-              <div class="decrement-icon" data-id="cake">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-tiramisu-desktop.jpg"
                 />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-tiramisu-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-tiramisu-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-tiramisu-mobile.jpg"
+                  alt="tiramisu"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="tiramisu">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
               </div>
-              <p id="quantity-cake" class="quantity" data-id="cake">1</p>
-              <div class="increment-icon" data-id="cake">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="text-info-product">
-            <p>Cake</p>
-            <h3>Red Velvet Cake</h3>
-            <h3>$4.50</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-brownie-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-brownie-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-brownie-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-brownie-mobile.jpg"
-                alt="brownie"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="brownie">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
-            </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="brownie"
-            >
-              <div class="decrement-icon" data-id="brownie">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
-                />
-              </div>
-              <p id="quantity-brownie" class="quantity" data-id="brownie">1</p>
-              <div class="increment-icon" data-id="brownie">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="tiramisu"
+              >
+                <div class="decrement-icon" data-id="tiramisu">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-tiramisu" class="quantity" data-id="tiramisu">
+                  1
+                </p>
+                <div class="increment-icon" data-id="tiramisu">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-info-product">
-            <p>Brownie</p>
-            <h3>Salted Caramel Brownie</h3>
-            <h3>$5.50</h3>
-          </div>
-        </article>
-        <article class="container-product">
-          <div class="container-image-product">
-            <picture>
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/images/image-panna-cotta-desktop.jpg"
-              />
-              <source
-                media="(min-width: 769px)"
-                srcset="./assets/images/image-panna-cotta-tablet.jpg"
-              />
-              <source
-                media="(min-width: 368px)"
-                srcset="/assets/images/image-panna-cotta-mobile.jpg"
-              />
-              <img
-                class="image-product"
-                srcset="/assets/images/image-panna-cotta-mobile.jpg"
-                alt="cotta"
-              />
-            </picture>
-            <div id="button-cart" class="button-cart" data-id="cotta">
-              <img
-                src="/assets/images/icon-add-to-cart.svg"
-                alt="add to cart"
-              />
-              <p>Add to cart</p>
+            <div class="text-info-product">
+              <p>Tiramisu</p>
+              <h3>Classic Tiramisu</h3>
+              <h3>$5.50</h3>
             </div>
-            <div
-              id="button-cart-add-remove"
-              class="button-cart-add-remove button-disable"
-              data-id="cotta"
-            >
-              <div class="decrement-icon" data-id="cotta">
-                <img
-                  src="/assets/images/icon-decrement-quantity.svg"
-                  alt="decrement"
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-baklava-desktop.jpg"
                 />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-baklava-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-baklava-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-baklava-mobile.jpg"
+                  alt="baklava"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="baklava">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
               </div>
-              <p id="quantity-cotta" class="quantity" data-id="cotta">1</p>
-              <div class="increment-icon" data-id="cotta">
-                <img
-                  src="/assets/images/icon-increment-quantity.svg"
-                  alt="increment"
-                />
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="baklava"
+              >
+                <div class="decrement-icon" data-id="baklava">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-baklava" class="quantity" data-id="baklava">
+                  1
+                </p>
+                <div class="increment-icon" data-id="baklava">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-info-product">
-            <p>Panna Cotta</p>
-            <h3>Vanilla Panna Cotta</h3>
-            <h3>$6.50</h3>
-          </div>
-        </article>
+            <div class="text-info-product">
+              <p>Baklava</p>
+              <h3>Pistachio Baklava</h3>
+              <h3>$4.00</h3>
+            </div>
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-meringue-desktop.jpg"
+                />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-meringue-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-meringue-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-meringue-mobile.jpg"
+                  alt="meringue"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="meringue">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
+              </div>
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="meringue"
+              >
+                <div class="decrement-icon" data-id="meringue">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-meringue" class="quantity" data-id="meringue">
+                  1
+                </p>
+                <div class="increment-icon" data-id="meringue">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text-info-product">
+              <p>Pie</p>
+              <h3>Lemon Meringue Pie</h3>
+              <h3>$5.00</h3>
+            </div>
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-cake-desktop.jpg"
+                />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-cake-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-cake-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-cake-mobile.jpg"
+                  alt="cake"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="cake">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
+              </div>
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="cake"
+              >
+                <div class="decrement-icon" data-id="cake">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-cake" class="quantity" data-id="cake">1</p>
+                <div class="increment-icon" data-id="cake">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text-info-product">
+              <p>Cake</p>
+              <h3>Red Velvet Cake</h3>
+              <h3>$4.50</h3>
+            </div>
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-brownie-desktop.jpg"
+                />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-brownie-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-brownie-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-brownie-mobile.jpg"
+                  alt="brownie"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="brownie">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
+              </div>
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="brownie"
+              >
+                <div class="decrement-icon" data-id="brownie">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-brownie" class="quantity" data-id="brownie">
+                  1
+                </p>
+                <div class="increment-icon" data-id="brownie">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text-info-product">
+              <p>Brownie</p>
+              <h3>Salted Caramel Brownie</h3>
+              <h3>$5.50</h3>
+            </div>
+          </article>
+          <article class="container-product">
+            <div class="container-image-product">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="./assets/images/image-panna-cotta-desktop.jpg"
+                />
+                <source
+                  media="(min-width: 769px)"
+                  srcset="./assets/images/image-panna-cotta-tablet.jpg"
+                />
+                <source
+                  media="(min-width: 368px)"
+                  srcset="/assets/images/image-panna-cotta-mobile.jpg"
+                />
+                <img
+                  class="image-product"
+                  srcset="/assets/images/image-panna-cotta-mobile.jpg"
+                  alt="cotta"
+                />
+              </picture>
+              <div id="button-cart" class="button-cart" data-id="cotta">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <p>Add to cart</p>
+              </div>
+              <div
+                id="button-cart-add-remove"
+                class="button-cart-add-remove button-disable"
+                data-id="cotta"
+              >
+                <div class="decrement-icon" data-id="cotta">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt="decrement"
+                  />
+                </div>
+                <p id="quantity-cotta" class="quantity" data-id="cotta">1</p>
+                <div class="increment-icon" data-id="cotta">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt="increment"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text-info-product">
+              <p>Panna Cotta</p>
+              <h3>Vanilla Panna Cotta</h3>
+              <h3>$6.50</h3>
+            </div>
+          </article>
+        </section>
+        <section class="container-all-cart">
+          <section class="container-cart">
+            <h2>Your cart (<span>0</span>)</h2>
+            <div class="container-empty-cart">
+              <img
+                src="/assets/images/illustration-empty-cart.svg"
+                alt="empty cart"
+              />
+              <p>Your added items will appear here</p>
+            </div>
+          </section>
+        </section>
       </section>
     </main>
     <footer></footer>
