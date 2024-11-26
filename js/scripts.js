@@ -5,61 +5,64 @@ const numberOfItemsElement = document.getElementById("number-of-items");
 const containerEmptyCartElement = document.getElementById(
   "container-empty-cart"
 );
+const containerItemsList = document.getElementById("container-items-list");
 const itemsListElement = document.getElementById("items-list");
+
+const totalPriceElement = document.getElementById("total-price");
 
 let products = [
   {
     id: 1,
     name: "waffle",
-    price: 0,
+    price: 6.5,
     quantity: 0,
   },
   {
     id: 2,
     name: "brulee",
-    price: 0,
+    price: 7.0,
     quantity: 0,
   },
   {
     id: 3,
     name: "macaron",
-    price: 0,
+    price: 8.0,
     quantity: 0,
   },
   {
     id: 4,
     name: "tiramisu",
-    price: 0,
+    price: 5.5,
     quantity: 0,
   },
   {
     id: 5,
     name: "baklava",
-    price: 0,
+    price: 4.0,
     quantity: 0,
   },
   {
     id: 6,
     name: "meringue",
-    price: 0,
+    price: 5,
     quantity: 0,
   },
   {
     id: 7,
     name: "cake",
-    price: 0,
+    price: 4.5,
     quantity: 0,
   },
   {
     id: 8,
     name: "brownie",
-    price: 0,
+    price: 5.5,
     quantity: 0,
   },
   {
     id: 9,
     name: "cotta",
-    price: 0,
+    price: 6.5,
     quantity: 0,
   },
 ];
@@ -119,10 +122,10 @@ const updateTotalItems = (product, isIncreasing) => {
 
   if (totalItems === 0) {
     containerEmptyCartElement.classList.remove("disable");
-    itemsListElement.classList.add("disable");
+    containerItemsList.classList.add("disable");
   } else {
     containerEmptyCartElement.classList.add("disable");
-    itemsListElement.classList.remove("disable");
+    containerItemsList.classList.remove("disable");
   }
 
   const existingItem = document.querySelector(`li[data-id="${product.name}"]`);
@@ -144,6 +147,11 @@ const updateTotalItems = (product, isIncreasing) => {
       }
     }
   }
+
+  const totalPrice = products.reduce((acc, product) => {
+    return acc + product.price * product.quantity;
+  }, 0);
+  totalPriceElement.textContent = totalPrice;
 };
 
 document.querySelectorAll(".button-cart").forEach((button) => {
