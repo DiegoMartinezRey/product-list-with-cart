@@ -1,5 +1,12 @@
 const buttonCartElement = document.getElementById("button-cart");
 
+const containerCartElement = document.getElementById("container-cart");
+const numberOfItemsElement = document.getElementById("number-of-items");
+const containerEmptyCartElement = document.getElementById(
+  "container-empty-cart"
+);
+const itemsListElement = document.getElementById("items-list");
+
 let products = [
   {
     id: 1,
@@ -80,6 +87,8 @@ const incrementProduct = (e) => {
 
   product.quantity++;
   quantityText.textContent = product.quantity;
+
+  updateTotalItems(product, true);
 };
 
 const decrementProduct = (e) => {
@@ -97,6 +106,43 @@ const decrementProduct = (e) => {
 
   if (product.quantity < 1) {
     buttonCartAddRemove.classList.add("button-disable");
+  }
+
+  updateTotalItems(product, false);
+};
+
+const updateTotalItems = (product, isIncreasing) => {
+  const totalItems = products.reduce((acc, product) => {
+    return acc + product.quantity;
+  }, 0);
+  numberOfItemsElement.textContent = totalItems;
+
+  if (totalItems === 0) {
+    containerEmptyCartElement.classList.remove("disable");
+    itemsListElement.classList.add("disable");
+  } else {
+    containerEmptyCartElement.classList.add("disable");
+    itemsListElement.classList.remove("disable");
+  }
+
+  const existingItem = document.querySelector(`li[data-id="${product.name}"]`);
+  if (isIncreasing) {
+    if (!existingItem) {
+      const newItem = document.createElement("li");
+      newItem.setAttribute("data-id", product.name);
+      newItem.textContent = `Item: ${product.name} (x${product.quantity})`;
+      itemsListElement.append(newItem);
+    } else {
+      existingItem.textContent = `Item: ${product.name} (x${product.quantity})`;
+    }
+  } else {
+    if (existingItem) {
+      if (product.quantity === 0) {
+        existingItem.remove();
+      } else {
+        existingItem.textContent = `Item: ${product.name} (x${product.quantity})`;
+      }
+    }
   }
 };
 

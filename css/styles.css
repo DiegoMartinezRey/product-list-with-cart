@@ -107,6 +107,10 @@ p {
   }
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .selected {
   background-color: var(--color-red);
   color: white;
@@ -286,4 +290,8 @@ p {
   align-items: center;
   gap: 16px;
   padding: 16px;
+}
+
+.disable {
+  display: none;
 }

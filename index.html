@@ -515,9 +515,10 @@
           </article>
         </section>
         <section class="container-all-cart">
-          <section class="container-cart">
-            <h2>Your cart (<span>0</span>)</h2>
-            <div class="container-empty-cart">
+          <section id="container-cart" class="container-cart">
+            <h2>Your cart (<span id="number-of-items">0</span>)</h2>
+            <ul id="items-list" class="items-list disable"></ul>
+            <div id="container-empty-cart" class="container-empty-cart">
               <img
                 src="/assets/images/illustration-empty-cart.svg"
                 alt="empty cart"
