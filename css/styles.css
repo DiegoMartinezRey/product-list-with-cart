@@ -16,9 +16,13 @@
   --color-rose-50: #fcf8f6;
   --color-green: #1ea575;
   --color-black: #000000;
+  --color-blackout: rgba(0, 0, 0, 0.5);
 
   --width-tablet: 768px;
   --width-desktop: 1024px;
+
+  --scale-blackout: scale(0);
+  --overflow-blackout: auto;
 }
 * {
   box-sizing: border-box;
@@ -44,6 +48,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background-color: var(--color-rose-50);
+  overflow: var(--overflow-blackout);
 }
 h1,
 h2,
@@ -71,6 +76,7 @@ p {
   gap: 26px;
   align-items: start;
   padding: 144px 24px 270px 24px;
+  position: relative;
 }
 @media screen and (width > 768px) {
   .container-body {
@@ -81,6 +87,55 @@ p {
   .container-body {
     padding: 132px 112px 110px 112px;
   }
+}
+
+.blackout {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-blackout);
+  top: 0;
+  left: 0;
+  transform: var(--scale-blackout);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+@media screen and (width > 768px) {
+  .blackout {
+    align-items: center;
+  }
+}
+
+.container-confirm-order {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 12px 12px 0 0;
+}
+@media screen and (width > 768px) {
+  .container-confirm-order {
+    max-width: 688px;
+    border-radius: 12px;
+  }
+}
+@media screen and (width > 1024px) {
+  .container-confirm-order {
+    max-width: 592px;
+  }
+}
+
+.container-resume-list {
+  background-color: var(--color-rose-50);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
 }
 
 .title {
@@ -100,6 +155,9 @@ p {
   padding: 7.5px 20.16px;
   font-size: var(--text-m);
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (width > 1024px) {
   .button {
@@ -109,6 +167,10 @@ p {
 
 .button:hover {
   cursor: pointer;
+}
+
+.button-order {
+  padding: 16px 0;
 }
 
 .selected {
@@ -300,6 +362,26 @@ p {
 }
 
 .items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-in-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-product {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text-price-quantity {
+  display: flex;
+  gap: 8px;
 }
 
 .container-order-total {
@@ -317,4 +399,8 @@ p {
 
 .disable {
   display: none;
+}
+
+.no-pointer {
+  pointer-events: none;
 }

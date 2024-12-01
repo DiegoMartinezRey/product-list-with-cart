@@ -8,7 +8,25 @@
   </head>
   <body>
     <header></header>
-    <main class="container-body">
+    <main id="container-page" class="container-body">
+      <section id="blackout" class="blackout" data-blackout="blackout">
+        <article class="container-confirm-order">
+          <div>
+            <img
+              src="/assets/images/icon-order-confirmed.svg"
+              alt="order confirmed"
+            />
+            <div>
+              <h1>Order Confirmed</h1>
+              <h3>We hope you enjoy your food!</h3>
+            </div>
+          </div>
+          <ul id="container-resume-list" class="container-resume-list"></ul>
+          <div class="button selected button-order">
+            <h3>Start New Order</h3>
+          </div>
+        </article>
+      </section>
       <h1 class="title">Desserts</h1>
       <section class="container-filters">
         <button class="button selected">Default</button>
@@ -38,26 +56,29 @@
                   alt="waffle"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="waffle">
+              <button id="button-cart" class="button-cart" data-id="id-waffle">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
-              </div>
+                <p class="no-pointer">Add to cart</p>
+              </button>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="waffle"
+                data-id="id-waffle"
               >
-                <div class="decrement-icon" data-id="waffle">
+                <div class="decrement-icon" data-id="id-waffle">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-waffle" class="quantity" data-id="waffle">1</p>
-                <div class="increment-icon" data-id="waffle">
+                <p id="quantity-waffle" class="quantity" data-id="id-waffle">
+                  1
+                </p>
+                <div class="increment-icon" data-id="id-waffle">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -92,26 +113,29 @@
                   alt="brulee"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="brulee">
+              <div id="button-cart" class="button-cart" data-id="id-creme">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="brulee"
+                data-id="id-creme"
               >
-                <div class="decrement-icon" data-id="brulee">
+                <div class="decrement-icon" data-id="id-creme">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-brulee" class="quantity" data-id="brulee">1</p>
-                <div class="increment-icon" data-id="brulee">
+                <p id="quantity-brulee" class="quantity" data-id="id-creme">
+                  1
+                </p>
+                <div class="increment-icon" data-id="id-creme">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -146,28 +170,29 @@
                   alt="macaron"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="macaron">
+              <div id="button-cart" class="button-cart" data-id="id-macaron">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="macaron"
+                data-id="id-macaron"
               >
-                <div class="decrement-icon" data-id="macaron">
+                <div class="decrement-icon" data-id="id-macaron">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-macaron" class="quantity" data-id="macaron">
+                <p id="quantity-macaron" class="quantity" data-id="id-macaron">
                   1
                 </p>
-                <div class="increment-icon" data-id="macaron">
+                <div class="increment-icon" data-id="id-macaron">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -202,28 +227,33 @@
                   alt="tiramisu"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="tiramisu">
+              <div id="button-cart" class="button-cart" data-id="id-tiramisu">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="tiramisu"
+                data-id="id-tiramisu"
               >
-                <div class="decrement-icon" data-id="tiramisu">
+                <div class="decrement-icon" data-id="id-tiramisu">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-tiramisu" class="quantity" data-id="tiramisu">
+                <p
+                  id="quantity-tiramisu"
+                  class="quantity"
+                  data-id="id-tiramisu"
+                >
                   1
                 </p>
-                <div class="increment-icon" data-id="tiramisu">
+                <div class="increment-icon" data-id="id-tiramisu">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -258,28 +288,29 @@
                   alt="baklava"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="baklava">
+              <div id="button-cart" class="button-cart" data-id="id-baklava">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="baklava"
+                data-id="id-baklava"
               >
-                <div class="decrement-icon" data-id="baklava">
+                <div class="decrement-icon" data-id="id-baklava">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-baklava" class="quantity" data-id="baklava">
+                <p id="quantity-baklava" class="quantity" data-id="id-baklava">
                   1
                 </p>
-                <div class="increment-icon" data-id="baklava">
+                <div class="increment-icon" data-id="id-baklava">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -314,28 +345,29 @@
                   alt="meringue"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="meringue">
+              <div id="button-cart" class="button-cart" data-id="id-pie">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="meringue"
+                data-id="id-pie"
               >
-                <div class="decrement-icon" data-id="meringue">
+                <div class="decrement-icon" data-id="id-pie">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-meringue" class="quantity" data-id="meringue">
+                <p id="quantity-meringue" class="quantity" data-id="id-pie">
                   1
                 </p>
-                <div class="increment-icon" data-id="meringue">
+                <div class="increment-icon" data-id="id-pie">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -370,26 +402,27 @@
                   alt="cake"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="cake">
+              <div id="button-cart" class="button-cart" data-id="id-cake">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="cake"
+                data-id="id-cake"
               >
-                <div class="decrement-icon" data-id="cake">
+                <div class="decrement-icon" data-id="id-cake">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-cake" class="quantity" data-id="cake">1</p>
-                <div class="increment-icon" data-id="cake">
+                <p id="quantity-cake" class="quantity" data-id="id-cake">1</p>
+                <div class="increment-icon" data-id="id-cake">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -424,28 +457,29 @@
                   alt="brownie"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="brownie">
+              <div id="button-cart" class="button-cart" data-id="id-brownie">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="brownie"
+                data-id="id-brownie"
               >
-                <div class="decrement-icon" data-id="brownie">
+                <div class="decrement-icon" data-id="id-brownie">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-brownie" class="quantity" data-id="brownie">
+                <p id="quantity-brownie" class="quantity" data-id="id-brownie">
                   1
                 </p>
-                <div class="increment-icon" data-id="brownie">
+                <div class="increment-icon" data-id="id-brownie">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -480,26 +514,27 @@
                   alt="cotta"
                 />
               </picture>
-              <div id="button-cart" class="button-cart" data-id="cotta">
+              <div id="button-cart" class="button-cart" data-id="id-panna">
                 <img
+                  class="no-pointer"
                   src="/assets/images/icon-add-to-cart.svg"
                   alt="add to cart"
                 />
-                <p>Add to cart</p>
+                <p class="no-pointer">Add to cart</p>
               </div>
               <div
                 id="button-cart-add-remove"
                 class="button-cart-add-remove button-disable"
-                data-id="cotta"
+                data-id="id-panna"
               >
-                <div class="decrement-icon" data-id="cotta">
+                <div class="decrement-icon" data-id="id-panna">
                   <img
                     src="/assets/images/icon-decrement-quantity.svg"
                     alt="decrement"
                   />
                 </div>
-                <p id="quantity-cotta" class="quantity" data-id="cotta">1</p>
-                <div class="increment-icon" data-id="cotta">
+                <p id="quantity-cotta" class="quantity" data-id="id-panna">1</p>
+                <div class="increment-icon" data-id="id-panna">
                   <img
                     src="/assets/images/icon-increment-quantity.svg"
                     alt="increment"
@@ -521,7 +556,7 @@
               <ul id="items-list" class="items-list"></ul>
               <div class="container-order-total">
                 <p>Order Total</p>
-                <h2>$<span id="total-price">1.00</span></h2>
+                <h2>$<span id="total-price">0</span></h2>
               </div>
               <div class="container-text-carbon">
                 <img
@@ -530,8 +565,14 @@
                 />
                 <p>This is a <span>carbon-neutral</span> delivery</p>
               </div>
-              <div class="button">
-                <h3>Confirm order</h3>
+              <div>
+                <div
+                  id="button-confirm-order"
+                  class="button selected button-order"
+                  data-blackout="confirmOrder"
+                >
+                  <h3>Confirm order</h3>
+                </div>
               </div>
             </div>
             <div id="container-empty-cart" class="container-empty-cart">

@@ -1,3 +1,5 @@
+const rootStyles = document.documentElement.style;
+
 const buttonCartElement = document.getElementById("button-cart");
 
 const containerCartElement = document.getElementById("container-cart");
@@ -10,60 +12,84 @@ const itemsListElement = document.getElementById("items-list");
 
 const totalPriceElement = document.getElementById("total-price");
 
-let products = [
+const blackoutElement = document.getElementById("blackout");
+const buttonConfirmOrderElement = document.getElementById(
+  "button-confirm-order"
+);
+const resumeItemsElement = document.getElementById("container-resume-list");
+
+const products = [
   {
     id: 1,
-    name: "waffle",
+    name: "id-waffle",
+    nameToShow: "Waffle with Berries",
     price: 6.5,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-waffle-thumbnail.jpg",
   },
   {
     id: 2,
-    name: "brulee",
+    name: "id-creme",
+    nameToShow: "Vanilla Bean Crème Brûlée",
     price: 7.0,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-creme-brulee-thumbnail.jpg",
   },
   {
     id: 3,
-    name: "macaron",
+    name: "id-macaron",
+    nameToShow: "Macaron Mix of Five",
     price: 8.0,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-macaron-thumbnail.jpg",
   },
   {
     id: 4,
-    name: "tiramisu",
+    name: "id-tiramisu",
+    nameToShow: "Classic Tiramisu",
     price: 5.5,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-tiramisu-thumbnail.jpg",
   },
   {
     id: 5,
-    name: "baklava",
+    name: "id-baklava",
+    nameToShow: "Pistachio Baklava",
     price: 4.0,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-baklava-thumbnail.jpg",
   },
   {
     id: 6,
-    name: "meringue",
+    name: "id-pie",
+    nameToShow: "Lemon Meringue Pie",
     price: 5,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-meringue-thumbnail.jpg",
   },
   {
     id: 7,
-    name: "cake",
+    name: "id-cake",
+    nameToShow: "Red Velvet Cake",
     price: 4.5,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-cake-thumbnail.jpg",
   },
   {
     id: 8,
-    name: "brownie",
+    name: "id-brownie",
+    nameToShow: "Salted Caramel Brownie",
     price: 5.5,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-brownie-thumbnail.jpg",
   },
   {
     id: 9,
-    name: "cotta",
+    name: "id-cotta",
+    nameToShow: "Vanilla Panna Cotta",
     price: 6.5,
     quantity: 0,
+    imgThumbnail: "/assets/images/image-panna-cotta-thumbnail.jpg",
   },
 ];
 
@@ -103,7 +129,7 @@ const decrementProduct = (e) => {
     `.button-cart-add-remove[data-id="${productName}"]`
   );
 
-  const product = products.find((item) => item.name === productName);
+  const product = products.find((product) => product.name === productName);
   product.quantity--;
   quantityText.textContent = product.quantity;
 
@@ -132,18 +158,53 @@ const updateTotalItems = (product, isIncreasing) => {
   if (isIncreasing) {
     if (!existingItem) {
       const newItem = document.createElement("li");
+      newItem.classList.add("product-in-cart");
       newItem.setAttribute("data-id", product.name);
-      newItem.textContent = `Item: ${product.name} (x${product.quantity})`;
+
+      newItem.innerHTML = `
+      <div class="text-product">
+        <p>${product.nameToShow}</p>
+        <div class="text-price-quantity">
+          <p>${product.quantity}x</p>
+          <p>@ $${product.price.toFixed(2)}</p>
+          <p>$${(product.quantity * product.price).toFixed(2)}</p>
+        </div>
+      </div>
+      <div>
+        <img src="/assets/images/icon-remove-item.svg" alt="Remove item" />
+      </div>
+    `;
+
       itemsListElement.append(newItem);
     } else {
-      existingItem.textContent = `Item: ${product.name} (x${product.quantity})`;
+      const quantityElement = existingItem.querySelector(
+        ".text-price-quantity p:nth-child(1)"
+      );
+      const totalElement = existingItem.querySelector(
+        ".text-price-quantity p:nth-child(3)"
+      );
+
+      quantityElement.textContent = `${product.quantity}x`;
+      totalElement.textContent = `$${(product.quantity * product.price).toFixed(
+        2
+      )}`;
     }
   } else {
     if (existingItem) {
       if (product.quantity === 0) {
         existingItem.remove();
       } else {
-        existingItem.textContent = `Item: ${product.name} (x${product.quantity})`;
+        const quantityElement = existingItem.querySelector(
+          ".text-price-quantity p:nth-child(1)"
+        );
+        const totalElement = existingItem.querySelector(
+          ".text-price-quantity p:nth-child(3)"
+        );
+
+        quantityElement.textContent = `${product.quantity}x`;
+        totalElement.textContent = `$${(
+          product.quantity * product.price
+        ).toFixed(2)}`;
       }
     }
   }
@@ -151,8 +212,53 @@ const updateTotalItems = (product, isIncreasing) => {
   const totalPrice = products.reduce((acc, product) => {
     return acc + product.price * product.quantity;
   }, 0);
-  totalPriceElement.textContent = totalPrice;
+  totalPriceElement.textContent = totalPrice.toFixed(2);
 };
+
+const getResumeProducts = () => {
+  const resumeProducts = products.filter((product) => {
+    return product.quantity > 0;
+  });
+
+  resumeProducts.map((resumeProduct) => {
+    const newItem = document.createElement("li");
+    newItem.classList.add("product-in-cart");
+    newItem.setAttribute("data-id", resumeProduct.name);
+
+    newItem.innerHTML = `
+        <img
+          src=${resumeProduct.imgThumbnail}
+          alt=${resumeProduct.name}
+        />
+        <div class="text-product">
+          <p>${resumeProduct.nameToShow}</p>
+          <div class="text-price-quantity">
+            <p>${resumeProduct.quantity}x</p>
+            <p>@ $${resumeProduct.price.toFixed(2)}</p>
+            <p>$${(resumeProduct.quantity * resumeProduct.price).toFixed(2)}</p>
+          </div>
+        </div>
+      `;
+
+    resumeItemsElement.append(newItem);
+  });
+};
+
+const emptyResumeList = () => {
+  resumeItemsElement.innerHTML = "";
+};
+
+const getResumeOrder = (e) => {
+  if (e.currentTarget.dataset.blackout === "confirmOrder") {
+    getResumeProducts();
+    rootStyles.setProperty("--scale-blackout", "scale(100%)");
+  } else if (e.target.dataset.blackout === "blackout") {
+    emptyResumeList();
+    rootStyles.setProperty("--scale-blackout", "scale(0)");
+  }
+};
+
+const startNewOrder = () => {};
 
 document.querySelectorAll(".button-cart").forEach((button) => {
   button.addEventListener("click", addItemToCart);
@@ -163,3 +269,6 @@ document.querySelectorAll(".increment-icon").forEach((button) => {
 document.querySelectorAll(".decrement-icon").forEach((button) => {
   button.addEventListener("click", decrementProduct);
 });
+
+buttonConfirmOrderElement.addEventListener("click", getResumeOrder);
+blackoutElement.addEventListener("click", getResumeOrder);
